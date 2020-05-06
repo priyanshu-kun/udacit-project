@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/* TODO: form decoration */
+    #details {
+        /* border: 1px solid black; */
+
+        border-radius: 1.2rem;
+        width: 40rem;
+        height: 25rem;
+        margin: auto;
+        transform: translate(0,12rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.9rem;
+        box-sizing: border-box;
+        background-color: #606c76;
+
+    }
+
+
+    #details:hover {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);;
+        transition: 500ms ease-in-out;
+
+    }
+
+
+    /* TODO: input box styling */
+    .input-data {
+        border-radius: .8rem;
+        border: none;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: .6rem 1.9rem .6rem 1.9rem;
+        margin: 0.3rem;
+        border: 2px solid rgb(138, 223, 247);
+        outline: none;
+    }
+
+
+    #checkbox {
+        /* display: inline; */
+        color: white;
+        font-size: 1rem;
+        /* font-weight: bold; */
+        margin-left: 6px;
+        font-family: 'Ubuntu-Light';
+
+    }
+
+
+    #sub {
+        font-family: 'Ubuntu-Light';
+        color: white;
+        margin-bottom: 0.8rem;
+    }
+
+
+    #Subscribe {
+         width: 8rem;
+         border: 2px solid var(--main-button);
+         margin: 20px 0 20px 9px ;
+         font-size: 1rem;
+         padding: 13px 0px 13px 4px;
+         /* border: 2px solid var(--main-button); */
+         background-color: var(--main-button);
+         border-radius: 4px;
+         color: white;
+         font-weight: bold;
+         cursor: pointer;
+         outline: none;
+    }
+
+
+    #Subscribe:active {
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 13px 0px 13px 4px;
+        border: 2px solid var(--main-button);
+        background-color: var(--secondary-button);
+        border-radius: 4px;
+        color: var(--main-button);
+        font-weight: bold;
+        transition: 80ms ease-out;
+    }
+
+/* TODO: reponsive design */
+@media(max-width: 860px) and (min-width: 220px) {
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    #details {
+        /* border: 1px solid black; */
+        border-radius: 0.4rem;
+        width: 20rem;
+        height: 15rem;
+        margin: auto;
+        transform: translate(0,14rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color: #606c76;
+    
+    }
+
+
+    #details:hover {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);;
+        transition: 500ms ease-in-out;
+    
+    }
+    
+    
+    .input-data {
+        border-radius: .4rem;
+        border: none;
+        font-size: 0.5rem;
+        text-align: center;
+        padding: .3rem 1rem .3rem 1rem;
+        margin: 0.1rem;
+        border: 2px solid rgb(138, 223, 247);
+        outline: none;
+    }
+
+
+    #checkbox {
+        color: white;
+        font-size: 0.6rem;
+        font-family: 'Ubuntu-Light';
+        margin-top: 10px;
+    }
+    
+    #sub {
+        font-family: 'Ubuntu-Light';
+        color: white;
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+    #Subscribe {
+        width: 4rem;
+        border: 2px solid var(--main-button);
+        margin: 10px 0 10px 9px ;
+        font-size: 0.4rem;
+        padding: 6px 0px 6px 2px;
+        /* border: 2px solid var(--main-button); */
+        background-color: var(--main-button);
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+   }
+    
+}

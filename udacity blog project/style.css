@@ -1,0 +1,542 @@
+/* TODO: import Css layout files */
+
+@import url("layout/form_style.css");
+@import url("layout/blog-post.css");
+@import url("layout/media.css");
+
+
+/* TODO: Set margin and padding to 0 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* TODO: Css color variable decleration */
+:root{
+    --main-button: #02B3E4;
+    --secondary-button: #F5FCFE;
+}
+
+
+/* Add additional fonts */
+@font-face {
+    font-family: 'VarelaRound';
+    src: url(fonts/VarelaRound.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: url(fonts/Ubuntu-Light.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url(fonts/Ubuntu-Bold.ttf);
+    font-style: normal;
+}
+
+
+/* TODO: making a grid */
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "navi card card card"
+    "foot foot foot foot";
+}
+
+
+/* TODO: style navigation menu */
+#navigation {
+    /* border: 1px solid black; */
+    grid-area: navi;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    height: 35rem;
+    width: 15rem;
+    margin: 0 0 0 1.5rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+#navigation:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);;
+    transition: 500ms ease-in-out;
+}
+
+
+#logo {
+    position: relative;
+    width: 40px;
+    top: 4rem;
+    left: 2.7rem;
+}
+ 
+#heading {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 0 0 35px 40px;
+    font-family: 'Ubuntu-Light';
+}
+
+
+
+#list > li {
+    margin: 10px;
+    list-style: none;
+    font-family: 'VarelaRound';
+    text-decoration: none;
+}
+
+
+#list > li > a {
+    text-decoration: none;
+    color: #02B3E4;
+}
+
+
+#list > li > a:hover {
+   color: #017A9B;
+}
+
+
+#follow {
+    /* width: 80px; */
+    border: 2px solid var(--main-button);
+    margin: 20px 0 20px 9px ;
+    font-size: 1rem;
+    padding: 13px 35px 13px 35px;
+    /* border: 2px solid var(--main-button); */
+    background-color: var(--main-button);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+#follow:active {
+    text-decoration: none;
+    /* border: none; */
+    /* margin-top: 60px; */
+    margin-left: 9px;
+    font-size: 1rem;
+    padding: 13px 35px 13px 35px;
+    border: 2px solid var(--main-button);
+    background-color: var(--secondary-button);
+    border-radius: 4px;
+    color: var(--main-button);
+    font-weight: bold;
+    transition: 80ms ease-out;
+}
+
+
+#subscribe {
+    text-decoration: none;
+    /* border: none; */
+    /* margin-top: 60px; */
+    font-family: 'Ubuntu-Bold';
+    margin-left: 9px;
+    font-size: .7rem;
+    padding: 13px 35px 13px 35px;
+    border: 2px solid var(--main-button);
+    background-color: var(--secondary-button);
+    border-radius: 4px;
+    color: var(--main-button);
+    cursor: pointer;
+}
+
+
+#subscribe:active {
+    text-decoration: none;
+    /* border: none; */
+    /* margin-top: 60px; */
+    margin-left: 9px;
+    font-size: .7rem;
+    padding: 13px 35px 13px 35px;
+    /* border: 2px solid var(--secondary-button); */
+    background-color: var(--main-button);
+    border-radius: 4px;
+    color: white;
+    /* font-weight: bold; */
+    transition: 150ms ease-in-out;
+}
+
+
+
+
+/* TODO: Card section styling */
+#card-section {
+    margin-right: 80px;
+    grid-area: card;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding-right: 40px;
+}
+
+
+.card {
+    width: 20rem;
+    height: 30rem;
+    font-family: 'VarelaRound';
+    background-color: #606c76;
+    position: relative;
+    top: 10rem;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: start;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 30px;
+    cursor: pointer;  
+}
+
+
+.card:hover {
+    box-shadow: 0 0 10px 5px rgba(165, 177, 187, 0.8);
+    transition: 250ms ease-in-out;
+    transform: scale(1.1);
+}
+
+
+.card-heading {
+    /* text-decoration: none; */
+    font-weight: 500;
+    font-size: 35px;
+    color: white;
+}
+
+
+.card-heading:hover {
+    color: var(--main-button);
+}
+
+
+.card-image {
+    width: 100px;
+    /* margin: 20px 0 20px 60px; */
+    display: block;
+    margin: 20px auto;
+}
+
+
+.card-anchor {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/* TODO: styling footer */
+#homepage-footer {
+    /* border: 1px solid black; */
+    grid-area: foot;
+    background-color: #d1d1d1;
+    height: 6rem;
+    margin-top: 25rem;
+    border-radius: 10px;
+    /* margin: 10px; */
+    font-family: 'VarelaRound';
+    /* width: 94.6rem; */
+    margin-left: 3px;
+    box-sizing: border-box;
+    padding: 40px 0 0 30px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+
+/* TODO: medium screen design */
+@media(max-width: 1024px) and (min-width: 860){
+    
+    /* TODO: Card section styling */
+    #card-section {
+        /* border: 1px solid black; */
+        grid-area: card;
+        display: grid;
+        grid-template-columns: repeat(auto,1fr);
+        grid-gap: 3rem;
+    }
+    
+    
+    .card {
+        width: 35rem;
+        height: 30rem;
+        font-family: 'VarelaRound';
+        background-color: #606c76;
+        /* background-color: cyan; */
+        /* position: relative;
+        top: 5rem; */
+        padding: 20px;
+        text-align: start;
+        box-sizing: border-box;
+        border-radius: 10px;
+        line-height: 30px;
+        cursor: pointer;  
+    }
+    
+
+    .card-heading {
+        /* text-decoration: none; */
+        font-weight: 500;
+        font-size: 55px;
+        color: white;
+    }
+    
+    
+    .card-image {
+        width: 130px;
+        /* margin: 20px 0 20px 60px; */
+        display: block;
+        margin: 40px auto;
+    }
+    
+    
+    .card-anchor {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    
+    
+    /* TODO: styling footer */
+    #homepage-footer {
+        /* border: 1px solid black; */
+        grid-area: foot;
+        background-color: #d1d1d1;
+        height: 6rem;
+        margin-top: 18rem;
+        border-radius: 10px;
+        /* margin: 10px; */
+        font-family: 'VarelaRound';
+        /* width: 94.6rem; */
+        margin-left: 3px;
+        box-sizing: border-box;
+        padding: 20px 0 0 30px;
+        font-weight: bold;
+        font-size: 22px;
+    }
+}
+
+
+/* TODO: small screen design */
+@media screen and (max-width: 860px) {
+    
+    #wrapper {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1rem;
+        grid-template-areas: 
+        "navi"
+        "card"
+        "foot";
+    }
+
+
+    #navigation {
+        /* border: 1px solid black; */
+       grid-area: navi;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        font-size: 1rem;
+        height: 20rem;
+        width: 61rem;
+        margin: 0 1.5rem 0 1.5rem;
+        padding: 10px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        /* justify-content: center; */
+    }
+
+
+    #list {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+    #heading {
+        display: inline-block;
+        font-size: 4.5rem;
+        margin: 30px 20px 35px 80px;
+        font-family: 'Ubuntu-Light';
+        /* color: blue; */
+        /* margin: 0px 0 0 4rem; */
+    }
+
+
+    #button{
+        margin: 0 0 0 60px;
+    }
+
+
+    #follow {
+        /* width: 80px; */
+        border: 2px solid var(--main-button);
+        /* margin: 20px 0 0 9px ; */
+        font-size: .8rem;
+        padding: 8px 27px 8px 25px;
+        /* border: 2px solid var(--main-button); */
+        background-color: var(--main-button);
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    
+    #follow:active {
+        text-decoration: none;
+        /* border: none; */
+        /* margin-top: 60px; */
+        /* margin-left: 9px; */
+        font-size: .8rem;
+        padding: 8px 25px 8px 25px;
+        border: 2px solid var(--main-button);
+        background-color: var(--secondary-button);
+        border-radius: 4px;
+        color: var(--main-button);
+        font-weight: bold;
+        transition: 80ms ease-out;
+    }
+
+
+    #subscribe {
+        text-decoration: none;
+        /* margin-top: 60px; */
+        font-family: 'Ubuntu-Bold';
+        margin-left: 9px;
+        font-size: .8rem;
+        padding: 8px 25px 8px 25px;
+        border: 2px solid var(--main-button);
+        background-color: var(--secondary-button);
+        border-radius: 4px;
+        color: var(--main-button);
+    }
+    
+    
+    #subscribe:active {
+        text-decoration: none;
+        /* margin-top: 60px; */
+        margin-left: 9px;
+        font-size: .7rem;
+        padding: 8px 25px 8px 25px;
+        /* border: 2px solid var(--secondary-button); */
+        background-color: var(--main-button);
+        border-radius: 4px;
+        color: white;
+        /* font-weight: bold; */
+        transition: 150ms ease-in-out;
+    }
+    
+    
+    #logo {
+        position: relative;
+        width: 60px;
+        top: 12rem;
+        left: 3.7rem;
+    }
+
+
+    #card-section {
+        /* border: 1px solid black; */
+        grid-area: card;
+        display: grid;
+        grid-template-columns: repeat(auto,1fr);
+        grid-gap: 3rem;
+    }
+    
+
+    .card {
+        width: 45rem;
+        height: 55rem;
+        font-family: 'VarelaRound';
+        background-color: #687986;
+        /* background-color: hotpink; */
+        /* position: relative;
+        top: 5rem; */
+        margin: 10px 0 0 6.7rem;;
+        padding: 20px;
+        text-align: start;
+        box-sizing: border-box;
+        border-radius: 10px;
+        line-height: 30px;
+        cursor: pointer;  
+        margin-bottom: 3rem;
+    }
+
+    
+    .card:hover {
+        box-shadow: 0 0 10px 5px rgba(165, 177, 187, 0.8);
+        transition: 250ms ease-in-out;
+        transform: scale(1.1);
+    }
+
+    
+ 
+    .card-heading {
+        /* text-decoration: none; */
+        font-weight: 500;
+        font-size: 55px;
+        color: white;
+    }
+    
+    
+    .card-image {
+        width: 130px;
+        /* margin: 20px 0 20px 60px; */
+        display: block;
+        margin: 40px auto;
+    }
+    
+    
+    .card-anchor {
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+        line-height: 42px;
+    }
+    
+    
+    
+    
+    /* TODO: styling footer */
+    #homepage-footer {
+        /* border: 1px solid black; */
+        grid-area: foot;
+        background-color: #d1d1d1;
+        height: 6rem;
+        margin-top: 8rem;
+        border-radius: 10px;
+        /* margin: 10px; */
+        font-family: 'VarelaRound';
+        /* width: 94.6rem; */
+        margin-left: 3px;
+        box-sizing: border-box;
+        padding: 20px 0 0 30px;
+        font-weight: bold;
+        font-size: 22px;
+    }
+}
+

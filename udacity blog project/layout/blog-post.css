@@ -1,0 +1,389 @@
+/* Create grid */
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+@font-face {
+    font-family: 'VarelaRound';
+    src: url(/fonts/VarelaRound.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: url(/fonts/Ubuntu-Light.ttf);
+    font-style: normal;
+}
+
+
+.blog-post-wrapper {
+    display: grid;
+    grid-template-rows: auto auto 8rem;
+    grid-template-areas: 
+    "heading"
+    "article"
+    "foot";
+    font-family: 'VarelaRound';
+}
+
+
+
+.page-link {
+    padding: 1.2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+
+#header-heading {
+    grid-area: heading;
+    /* border-radius: 10px; */
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #9b4dca;
+}
+
+
+#h-header {
+    font-size: 3rem;
+    padding: 30px 0 30px 20px;
+    font-family: 'Ubuntu-Light';
+    font-weight: lighter;
+}
+
+
+#author-profile {
+    width: 150px;
+    padding: 0px 0px 0 0px;
+    position: relative;
+    /* top: 1px; */
+    bottom: 30px;
+    /* left: 5px; */
+    z-index: 1;
+}
+
+
+#author-info {
+    /* border: 2px solid black; */
+    width: 35rem;
+    display: inline-block;
+    /* border: 1px solid black; */
+    padding-left: 15px;
+    z-index: 2;
+    position: relative;
+    right: 20px;
+    bottom: 4rem;
+}
+
+
+#author-name {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+.Description {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+
+.Description > a{
+    text-decoration: none;
+    /* font-size: 1.2rem; */
+    color: rgb(255, 255, 255);
+}
+
+
+/* TODO: Main article editing */
+#main-article {
+    /* border: 1px solid black; */
+    grid-area: article;
+    padding: 2rem;
+    line-height: 2rem;
+    box-sizing: border-box;
+}
+
+
+.paragraph {
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(77, 76, 76);
+}
+
+
+.data {
+    width: 60%;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+}
+
+
+#data-id {
+    height: auto;
+}
+
+
+#main-heading {
+    font-size: 3rem;
+    font-family: 'Ubuntu-Light';
+    margin: 20px 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.secondary-heading {
+    font-size: 2rem;
+    font-family: 'Ubuntu-Light';
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(121, 120, 120);
+}
+
+
+#main-figure {
+   margin: 2rem 0;
+}
+
+
+#html-picture {
+    width: 1000px;
+    height: 350px;
+    display: block;
+    margin: 0px auto;
+}
+
+
+#figcaption {
+    /* margin-left: 4rem; */
+    text-align: center;
+    font-size: 22px;
+    color: #606c76;
+}
+
+
+#figcaption a {
+   color: #02B3E4;
+   text-decoration: none;
+}
+
+
+#line-2 {
+    width: 0;
+    height: 100px;
+    border: 2px solid #606c76;
+    background-color: #606c76;
+    /* border-radius: 10px; */
+    margin-top: 1rem;
+    z-index: 1;
+    position: relative;
+    top: 1.3rem;
+}
+
+
+#blockquote {
+    position: relative;
+    bottom: 5.1rem;
+    height: 5rem;
+    padding: 10px 0;
+    background-color: #f8f6f6;
+    z-index: -1;
+}
+
+
+
+#customers {
+    font-family: 'VarelaRound';
+    border: 2px solid #02B3E4;
+    padding: 5px;
+    border-radius: 10px;
+    /* border-collapse: collapse; */
+    width: 60rem;
+    display: table;
+    margin: 40px auto;
+}
+
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 10px;
+    /* color: white; */
+    text-align: center;
+}
+
+
+#customers tr{
+    background-color: rgb(230, 250, 255);
+}
+
+
+#customers tr:hover {
+    background-color: rgb(189, 235, 248);
+}
+
+
+#customers th {
+  padding: 12px 5px;
+  /* padding-bottom: 12px; */
+  text-align: center;
+  background-color: #02B3E4;
+  color: white;
+  border-radius: 10px;
+}
+
+
+#share {
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Ubuntu-Light';
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    opacity: 0.5;
+}
+
+
+#social-icons{
+    /* border: 1px solid black; */
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+
+.social-logo{
+    display: block;
+    width: 35px;
+    margin: 0px auto 15px;
+    filter: grayscale(100%);
+}
+
+
+.social-logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    filter: none;
+    transition: 150ms ease-in-out;
+}
+
+
+#section-2 {
+    width: 60%;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+}
+
+
+.modified-para {
+    text-align: start;
+    width: 90%;
+}
+
+
+.list-item {
+    /* margin-left: 5rem; */
+    position: relative;
+    left: 4rem;
+    list-style: none;
+    margin: 10px 0;
+}
+
+
+#unorderd-list li::before {
+    content: "";
+    font-weight: bold;
+    display: inline-block; 
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    background-color: #02B3E4;
+    /* border: 1px solid black; */
+    margin-left: -2.7em;
+    position: relative;
+    top: 2rem;
+}
+
+
+#my-buttons {
+    padding:3rem;
+    text-align: center;
+}
+
+
+#olderpost-btn {
+    margin: 1rem;
+    text-decoration: none;
+    border: 1px solid #02B3E4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #02B3E4;
+    transition: 100ms ease-out;
+}
+
+
+#olderpost-btn:active {
+    border: 1px solid  #02B3E4;
+    background-color: #02B3E4;
+    color: white;
+}
+
+
+#nextpost-btn {
+    text-decoration: none;
+    border: 1px solid #02B3E4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #02B3E4;
+    transition: 100ms ease-out;
+}
+
+
+#nextpost-btn:active {
+    border: 1px solid  #02B3E4;
+    background-color: #02B3E4;
+    color: white;
+}
+
+
+::selection {
+    color: white;
+    background-color: #606c76;
+}
+
+
+#footer {
+    grid-area: foot;
+    background-color: #606c76;
+    height: 10rem;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content:flex-start;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 0 10px;
+}
+
+
+#footer a {
+    color: #02B3E4;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+
+.new-data {
+    margin-top: 3rem;
+}

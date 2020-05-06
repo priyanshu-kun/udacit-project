@@ -1,0 +1,165 @@
+/* TODO:Implement Media query */
+@media (max-width: 1100px) and  (min-width: 800px){
+    .blog-post-wrapper {
+        display: grid;
+        grid-template-rows: auto auto 8rem;
+        grid-template-areas: 
+        "heading"
+        "article"
+        "foot";
+        font-family: 'VarelaRound';
+    }
+
+
+    .page-link {
+        padding: 1.2rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #02B3E4;
+    }
+    
+    
+    #header-heading {
+        grid-area: heading;
+        padding: 1rem;
+        overflow: hidden;
+        /* height: 15rem; */
+    }
+
+
+    #author-profile {
+        width: 120px;
+        padding: 0px 0px 0 0px;
+        position: relative;
+        bottom: 30px;
+        /* left: 5px; */
+        z-index: 1;
+    }
+
+
+    #author-name {
+        font-size: 1.6rem;
+        color: #ffffff;
+    }
+    
+    
+    .Description {
+        font-size: 0.8rem;
+        color: rgb(255, 255, 255);
+    }
+    
+
+    #h-header {
+        font-size: 2.6rem;
+        padding: 30px 0 30px 20px;
+        font-family: 'Ubuntu-Light';
+        font-weight: lighter;
+    }
+    
+
+    
+    #main-heading {
+        font-size: 2.5rem;
+        font-family: 'Ubuntu-Light';
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    
+    .secondary-heading {
+        font-size: 1.5rem;
+        font-family: 'Ubuntu-Light';
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(121, 120, 120);
+    }
+    
+    
+    #main-figure {
+       margin: auto 0 2rem 0;
+    }
+    
+    
+    #html-picture {
+        width: 800px;
+        height: 350px;
+        display: block;
+        margin: 0px auto;
+    }
+    
+    
+    #customers {
+        font-family: 'VarelaRound';
+        border: 2px solid #02B3E4;
+        padding: 5px;
+        border-radius: 10px;
+        width: 50rem;
+        display: table;
+        margin: 40px auto;
+    }
+
+    .social-logo{
+        display: block;
+        width: 30px;
+        margin: 0px auto 15px;
+        filter: grayscale(100%);
+    }
+}
+    
+@media screen and (max-width: 800px) {
+    /* start of medium tablet styles and phones */
+    .page-link {
+        padding: 1.2rem;
+        margin-top: 2rem;
+        font-size: 0.6rem;
+        color: #02B3E4;
+    }
+
+
+    #author-profile {
+        width: 100px;
+        padding: 0px 0px 0 0px;
+        position: relative;
+        bottom: 30px;
+        /* left: 5px; */
+        z-index: 1;
+    }
+
+
+    #author-name {
+        font-size: 1.2rem;
+        color: #ffffff;
+    }
+    
+    
+    .Description {
+        font-size: 0.5rem;
+        color: rgb(255, 255, 255);
+    }
+
+    #html-picture {
+        width: 800px;
+        height: 350px;
+        display: block;
+        margin: 0px auto;
+    }
+
+
+    #customers {
+        font-family: 'VarelaRound';
+        border: 2px solid #02B3E4;
+        padding: 5px;
+        border-radius: 10px;
+        width: 90%;
+        display: table;
+        margin: 40px auto;
+        
+    }
+
+    .social-logo{
+        display: block;
+        width: 25px;
+        margin: 0px auto 15px;
+        filter: grayscale(100%);
+    }
+}
